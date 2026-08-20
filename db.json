@@ -23,7 +23,7 @@
       "puntajeIA": 100,
       "justificacionIA": "Evaluación simulada: sector permitido; inversión proyectada cumple el mínimo; empleos proyectados cumplen el mínimo. La decisión final corresponde al analista humano.",
       "clasificacionIA": "Recomendada",
-      "decisionHumana": "En revisión",
+      "decisionHumana": "Rechazada",
       "zonaFrancaId": 1,
       "fecha": "2026-08-20T15:00:00.000Z"
     },
@@ -52,7 +52,7 @@
       "puntajeIA": 50,
       "justificacionIA": "Evaluación simulada: sector fuera de la lista académica permitida; inversión proyectada cumple el mínimo; empleos proyectados por debajo del mínimo. La decisión final corresponde al analista humano.",
       "clasificacionIA": "Revisar",
-      "decisionHumana": "Aprobada",
+      "decisionHumana": "En revisión",
       "zonaFrancaId": 1,
       "fecha": "2026-08-20T20:42:13.498Z",
       "id": 3
@@ -205,6 +205,24 @@
       "responsable": "Sistema",
       "fecha": "2026-08-20T20:58:40.189Z",
       "id": 10
+    },
+    {
+      "solicitudId": 1,
+      "empresa": "TecnoVerde CR",
+      "accion": "Decisión humana",
+      "detalle": "Rechazada",
+      "responsable": "Analista",
+      "fecha": "2026-08-20T21:27:53.941Z",
+      "id": 11
+    },
+    {
+      "solicitudId": 3,
+      "empresa": "Packlolos Company",
+      "accion": "Decisión humana",
+      "detalle": "En revisión",
+      "responsable": "Analista",
+      "fecha": "2026-08-20T21:28:53.834Z",
+      "id": 12
     }
   ]
 }
