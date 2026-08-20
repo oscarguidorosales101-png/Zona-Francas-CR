@@ -8,7 +8,7 @@
 <body>
   <header class="site-header">
     <div><p class="eyebrow">Laboratorio #3</p><h1>ZoFranca CR</h1><p>Solicitudes y cumplimiento para Zonas Francas de Costa Rica</p></div>
-    <div id="globalStatus" class="status-pill" aria-live="polite">Listo</div>
+    <button id="globalStatus" class="status-pill" type="button" aria-live="polite">Cerrar sesión</button>
   </header>
   <nav class="tabs" aria-label="Secciones">
     <button class="tab is-active" data-view="solicitud">Nueva solicitud</button>
@@ -38,7 +38,7 @@
     <section id="view-dashboard" class="view">
       <div class="toolbar"><div><p class="eyebrow">Analista</p><h2>Dashboard de solicitudes</h2></div><button id="evaluarPendientes" class="primary">Evaluar pendientes en paralelo</button></div>
       <div id="metricas" class="metrics"></div>
-      <div class="filters panel"><label>Estado<select id="filterEstado"><option value="">Todos</option><option>Recomendada</option><option>Revisar</option><option>Rechazada</option><option>Pendiente</option></select></label><label>Sector<select id="filterSector"><option value="">Todos</option><option value="tecnologia">Tecnología</option><option value="manufactura">Manufactura</option><option value="servicios">Servicios</option></select></label></div>
+      <div class="filters panel"><label>Estado<select id="filterEstado"><option value="">Todos</option><option>Revisar</option><option>Rechazada</option><option>Aprobada</option><option>Pendiente</option></select></label><label>Sector<select id="filterSector"><option value="">Todos</option><option value="tecnologia">Tecnología</option><option value="manufactura">Manufactura</option><option value="servicios">Servicios</option></select></label></div>
       <div id="solicitudesList" class="cards"></div>
     </section>
 

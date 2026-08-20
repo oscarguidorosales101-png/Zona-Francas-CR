@@ -19,11 +19,11 @@
       "inversionProyectada": 90000,
       "empleosProyectados": 24,
       "documentos": "documentos-demo.pdf",
-      "estado": "Pendiente IA",
-      "puntajeIA": null,
-      "justificacionIA": "",
-      "clasificacionIA": "Pendiente",
-      "decisionHumana": "Pendiente",
+      "estado": "Evaluada",
+      "puntajeIA": 100,
+      "justificacionIA": "Evaluación simulada: sector permitido; inversión proyectada cumple el mínimo; empleos proyectados cumplen el mínimo. La decisión final corresponde al analista humano.",
+      "clasificacionIA": "Recomendada",
+      "decisionHumana": "En revisión",
       "zonaFrancaId": 1,
       "fecha": "2026-08-20T15:00:00.000Z"
     },
@@ -41,6 +41,21 @@
       "decisionHumana": "Aprobada",
       "zonaFrancaId": 1,
       "fecha": "2026-08-19T15:00:00.000Z"
+    },
+    {
+      "empresa": "Packlolos Company",
+      "sector": "servicios",
+      "inversionProyectada": 1000000,
+      "empleosProyectados": 5,
+      "documentos": "Documento",
+      "estado": "Evaluada",
+      "puntajeIA": 50,
+      "justificacionIA": "Evaluación simulada: sector fuera de la lista académica permitida; inversión proyectada cumple el mínimo; empleos proyectados por debajo del mínimo. La decisión final corresponde al analista humano.",
+      "clasificacionIA": "Revisar",
+      "decisionHumana": "Aprobada",
+      "zonaFrancaId": 1,
+      "fecha": "2026-08-20T20:42:13.498Z",
+      "id": 3
     }
   ],
   "empresas": [
@@ -53,10 +68,53 @@
       "empleosComprometidos": 14,
       "zonaFrancaId": 1,
       "fechaInstalacion": "2026-08-20T12:00:00.000Z"
+    },
+    {
+      "solicitudId": 3,
+      "empresa": "Packlolos Company",
+      "sector": "servicios",
+      "inversionComprometida": 1000000,
+      "empleosComprometidos": 5,
+      "zonaFrancaId": 1,
+      "fechaInstalacion": "2026-08-20T20:42:22.977Z",
+      "id": 2
+    },
+    {
+      "solicitudId": 1,
+      "empresa": "TecnoVerde CR",
+      "sector": "tecnologia",
+      "inversionComprometida": 90000,
+      "empleosComprometidos": 24,
+      "zonaFrancaId": 1,
+      "fechaInstalacion": "2026-08-20T20:55:29.801Z",
+      "id": 3
     }
   ],
-  "reportesCumplimiento": [],
-  "alertas": [],
+  "reportesCumplimiento": [
+    {
+      "empresaId": 2,
+      "empresa": "Packlolos Company",
+      "empleosReales": 2,
+      "inversionEjecutada": 5000000,
+      "exportaciones": 10,
+      "fecha": "2026-08-20T20:58:40.172Z",
+      "estado": "Con alerta",
+      "id": 1
+    }
+  ],
+  "alertas": [
+    {
+      "empresaId": 2,
+      "empresa": "Packlolos Company",
+      "tipo": "Empleos",
+      "comprometido": 5,
+      "reportado": 2,
+      "estado": "Abierta",
+      "fecha": "2026-08-20T20:58:40.182Z",
+      "reporteId": 1,
+      "id": 1
+    }
+  ],
   "historial": [
     {
       "id": 1,
@@ -66,6 +124,87 @@
       "detalle": "Solicitud aprobada",
       "responsable": "Analista",
       "fecha": "2026-08-20T12:00:00.000Z"
+    },
+    {
+      "solicitudId": 1,
+      "empresa": "TecnoVerde CR",
+      "accion": "Decisión humana",
+      "detalle": "Rechazada",
+      "responsable": "Analista",
+      "fecha": "2026-08-20T20:39:21.676Z",
+      "id": 2
+    },
+    {
+      "solicitudId": 1,
+      "empresa": "TecnoVerde CR",
+      "accion": "Decisión humana",
+      "detalle": "Rechazada",
+      "responsable": "Analista",
+      "fecha": "2026-08-20T20:39:36.352Z",
+      "id": 3
+    },
+    {
+      "solicitudId": 1,
+      "empresa": "TecnoVerde CR",
+      "accion": "Decisión humana",
+      "detalle": "Rechazada",
+      "responsable": "Analista",
+      "fecha": "2026-08-20T20:39:36.519Z",
+      "id": 4
+    },
+    {
+      "solicitudId": 1,
+      "empresa": "TecnoVerde CR",
+      "accion": "Decisión humana",
+      "detalle": "Rechazada",
+      "responsable": "Analista",
+      "fecha": "2026-08-20T20:39:36.701Z",
+      "id": 5
+    },
+    {
+      "solicitudId": 1,
+      "empresa": "TecnoVerde CR",
+      "accion": "Decisión humana",
+      "detalle": "Rechazada",
+      "responsable": "Analista",
+      "fecha": "2026-08-20T20:39:37.335Z",
+      "id": 6
+    },
+    {
+      "solicitudId": 3,
+      "empresa": "Packlolos Company",
+      "accion": "Decisión humana",
+      "detalle": "Aprobada",
+      "responsable": "Analista",
+      "fecha": "2026-08-20T20:42:22.971Z",
+      "id": 7
+    },
+    {
+      "solicitudId": 1,
+      "empresa": "TecnoVerde CR",
+      "accion": "Decisión humana",
+      "detalle": "Aprobada",
+      "responsable": "Analista",
+      "fecha": "2026-08-20T20:55:29.794Z",
+      "id": 8
+    },
+    {
+      "solicitudId": 1,
+      "empresa": "TecnoVerde CR",
+      "accion": "Decisión humana",
+      "detalle": "En revisión",
+      "responsable": "Analista",
+      "fecha": "2026-08-20T20:57:57.132Z",
+      "id": 9
+    },
+    {
+      "solicitudId": 3,
+      "empresa": "Packlolos Company",
+      "accion": "Reporte de cumplimiento",
+      "detalle": "Generó alerta",
+      "responsable": "Sistema",
+      "fecha": "2026-08-20T20:58:40.189Z",
+      "id": 10
     }
   ]
 }
