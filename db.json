@@ -1,0 +1,71 @@
+{
+  "zonasFrancas": [
+    {
+      "id": 1,
+      "nombre": "ZF Ejemplo",
+      "inversionMinima": 50000,
+      "empleosMinimos": 10,
+      "sectoresPermitidos": [
+        "tecnologia",
+        "manufactura"
+      ]
+    }
+  ],
+  "solicitudes": [
+    {
+      "id": 1,
+      "empresa": "TecnoVerde CR",
+      "sector": "tecnologia",
+      "inversionProyectada": 90000,
+      "empleosProyectados": 24,
+      "documentos": "documentos-demo.pdf",
+      "estado": "Pendiente IA",
+      "puntajeIA": null,
+      "justificacionIA": "",
+      "clasificacionIA": "Pendiente",
+      "decisionHumana": "Pendiente",
+      "zonaFrancaId": 1,
+      "fecha": "2026-08-20T15:00:00.000Z"
+    },
+    {
+      "id": 2,
+      "empresa": "Manufacturas Delta",
+      "sector": "manufactura",
+      "inversionProyectada": 65000,
+      "empleosProyectados": 14,
+      "documentos": "respaldo-demo.pdf",
+      "estado": "Evaluada",
+      "puntajeIA": 82,
+      "justificacionIA": "Cumple sector permitido, inversión mínima y empleos mínimos del escenario académico.",
+      "clasificacionIA": "Recomendada",
+      "decisionHumana": "Aprobada",
+      "zonaFrancaId": 1,
+      "fecha": "2026-08-19T15:00:00.000Z"
+    }
+  ],
+  "empresas": [
+    {
+      "id": 1,
+      "solicitudId": 2,
+      "empresa": "Manufacturas Delta",
+      "sector": "manufactura",
+      "inversionComprometida": 65000,
+      "empleosComprometidos": 14,
+      "zonaFrancaId": 1,
+      "fechaInstalacion": "2026-08-20T12:00:00.000Z"
+    }
+  ],
+  "reportesCumplimiento": [],
+  "alertas": [],
+  "historial": [
+    {
+      "id": 1,
+      "solicitudId": 2,
+      "empresa": "Manufacturas Delta",
+      "accion": "Decisión humana",
+      "detalle": "Solicitud aprobada",
+      "responsable": "Analista",
+      "fecha": "2026-08-20T12:00:00.000Z"
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ZoFranca CR</title>
+</head>
+<body>
+  <header class="site-header">
+    <div><p class="eyebrow">Laboratorio #3</p><h1>ZoFranca CR</h1><p>Solicitudes y cumplimiento para Zonas Francas de Costa Rica</p></div>
+    <div id="globalStatus" class="status-pill" aria-live="polite">Listo</div>
+  </header>
+  <nav class="tabs" aria-label="Secciones">
+    <button class="tab is-active" data-view="solicitud">Nueva solicitud</button>
+    <button class="tab" data-view="dashboard">Dashboard</button>
+    <button class="tab" data-view="cumplimiento">Cumplimiento</button>
+    <button class="tab" data-view="alertas">Alertas</button>
+  </nav>
+  <main>
+    <section id="view-solicitud" class="view is-active">
+      <div class="grid-2">
+        <article class="panel">
+          <p class="eyebrow">Empresa solicitante</p><h2>Solicitud de instalación</h2>
+          <form id="solicitudForm" class="form-grid">
+            <label>Nombre de empresa<input id="empresa" required /></label>
+            <label>Sector<select id="sector" required><option value="">Seleccionar</option><option value="tecnologia">Tecnología</option><option value="manufactura">Manufactura</option><option value="servicios">Servicios</option></select></label>
+            <label>Inversión proyectada<input id="inversion" type="number" min="0" required /></label>
+            <label>Empleos proyectados<input id="empleos" type="number" min="0" required /></label>
+            <label class="full">Documentos de respaldo<input id="documentos" placeholder="Nombre o referencia del archivo" required /></label>
+            <button class="primary full" type="submit">Enviar solicitud</button>
+          </form>
+          <p id="solicitudMessage" class="message" aria-live="polite"></p>
+        </article>
+        <aside class="panel accent"><p class="eyebrow">Criterios académicos</p><h2 id="zonaNombre">Zona franca</h2><div id="criteriosZona"></div><p class="note">Estos valores son datos de demostración del laboratorio y no representan normativa oficial.</p></aside>
+      </div>
+    </section>
+
+    <section id="view-dashboard" class="view">
+      <div class="toolbar"><div><p class="eyebrow">Analista</p><h2>Dashboard de solicitudes</h2></div><button id="evaluarPendientes" class="primary">Evaluar pendientes en paralelo</button></div>
+      <div id="metricas" class="metrics"></div>
+      <div class="filters panel"><label>Estado<select id="filterEstado"><option value="">Todos</option><option>Recomendada</option><option>Revisar</option><option>Rechazada</option><option>Pendiente</option></select></label><label>Sector<select id="filterSector"><option value="">Todos</option><option value="tecnologia">Tecnología</option><option value="manufactura">Manufactura</option><option value="servicios">Servicios</option></select></label></div>
+      <div id="solicitudesList" class="cards"></div>
+    </section>
+
+    <section id="view-cumplimiento" class="view">
+      <div class="grid-2"><article class="panel"><p class="eyebrow">Empresa instalada</p><h2>Reporte de cumplimiento</h2>
+        <form id="cumplimientoForm" class="form-grid"><label class="full">Empresa<select id="empresaInstalada" required></select></label><label>Empleos reales<input id="empleosReales" type="number" min="0" required /></label><label>Inversión ejecutada<input id="inversionEjecutada" type="number" min="0" required /></label><label class="full">Exportaciones<input id="exportaciones" type="number" min="0" required /></label><button class="primary full" type="submit">Procesar reporte</button></form><p id="cumplimientoMessage" class="message"></p>
+      </article><aside class="panel"><p class="eyebrow">Referencia</p><h2>Compromisos originales</h2><div id="compromisos"></div></aside></div>
+    </section>
+
+    <section id="view-alertas" class="view"><div class="toolbar"><div><p class="eyebrow">Cumplimiento</p><h2>Alertas de incumplimiento</h2></div><button id="refrescarAlertas">Actualizar</button></div><div id="alertasList" class="cards"></div></section>
+  </main>
+
+  <dialog id="detalleDialog"><div class="dialog-head"><h2>Detalle de solicitud</h2><button id="cerrarDialog" aria-label="Cerrar">×</button></div><div id="detalleBody"></div></dialog>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
