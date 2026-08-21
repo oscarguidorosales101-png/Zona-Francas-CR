@@ -8,13 +8,14 @@
 <body>
   <header class="site-header">
     <div><p class="eyebrow">Laboratorio #3</p><h1>ZoFranca CR</h1><p>Solicitudes y cumplimiento para Zonas Francas de Costa Rica</p></div>
-    <div id="globalStatus" class="status-pill" aria-live="polite">Listo</div>
+    <button id="globalStatus" class="status-pill" type="button" aria-live="polite">Cerrar sesión</button>
   </header>
   <nav class="tabs" aria-label="Secciones">
     <button class="tab is-active" data-view="solicitud">Nueva solicitud</button>
     <button class="tab" data-view="dashboard">Dashboard</button>
     <button class="tab" data-view="cumplimiento">Cumplimiento</button>
     <button class="tab" data-view="alertas">Alertas</button>
+    <button class="tab" data-view="empresas">Empresas</button>
   </nav>
   <main>
     <section id="view-solicitud" class="view is-active">
@@ -38,7 +39,7 @@
     <section id="view-dashboard" class="view">
       <div class="toolbar"><div><p class="eyebrow">Analista</p><h2>Dashboard de solicitudes</h2></div><button id="evaluarPendientes" class="primary">Evaluar pendientes en paralelo</button></div>
       <div id="metricas" class="metrics"></div>
-      <div class="filters panel"><label>Estado<select id="filterEstado"><option value="">Todos</option><option>Recomendada</option><option>Revisar</option><option>Rechazada</option><option>Pendiente</option></select></label><label>Sector<select id="filterSector"><option value="">Todos</option><option value="tecnologia">Tecnología</option><option value="manufactura">Manufactura</option><option value="servicios">Servicios</option></select></label></div>
+      <div class="filters panel"><label>Estado<select id="filterEstado"><option value="">Todos</option><option>Revisar</option><option>Rechazada</option><option>Aprobada</option><option>Pendiente</option></select></label><label>Sector<select id="filterSector"><option value="">Todos</option><option value="tecnologia">Tecnología</option><option value="manufactura">Manufactura</option><option value="servicios">Servicios</option></select></label></div>
       <div id="solicitudesList" class="cards"></div>
     </section>
 
@@ -49,6 +50,11 @@
     </section>
 
     <section id="view-alertas" class="view"><div class="toolbar"><div><p class="eyebrow">Cumplimiento</p><h2>Alertas de incumplimiento</h2></div><button id="refrescarAlertas">Actualizar</button></div><div id="alertasList" class="cards"></div></section>
+
+    <section id="view-empresas" class="view">
+      <div class="toolbar"><div><p class="eyebrow">Operación</p><h2>Gestión de empresas</h2></div></div>
+      <div id="empresasList" class="cards"></div>
+    </section>
   </main>
 
   <dialog id="detalleDialog"><div class="dialog-head"><h2>Detalle de solicitud</h2><button id="cerrarDialog" aria-label="Cerrar">×</button></div><div id="detalleBody"></div></dialog>

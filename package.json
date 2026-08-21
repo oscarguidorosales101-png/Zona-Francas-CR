@@ -13,6 +13,6 @@
   "devDependencies": {
     "concurrently": "8.2.2",
     "json-server": "0.17.4",
-    "vite": "5.4.14"
+    "vite": "^6.4.3"
   }
 }
