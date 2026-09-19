@@ -56,6 +56,21 @@
       "zonaFrancaId": 1,
       "fecha": "2026-08-20T20:42:13.498Z",
       "id": 3
+    },
+    {
+      "empresa": "Plan Tato",
+      "sector": "manufactura",
+      "inversionProyectada": 20000,
+      "empleosProyectados": 2,
+      "documentos": "Plan_de_Negocios_Tato.pdf",
+      "estado": "Evaluada",
+      "puntajeIA": 55,
+      "justificacionIA": "Evaluación simulada: sector permitido; inversión proyectada por debajo del mínimo; empleos proyectados por debajo del mínimo. La decisión final corresponde al analista humano.",
+      "clasificacionIA": "Revisar",
+      "decisionHumana": "Pendiente",
+      "zonaFrancaId": 1,
+      "fecha": "2026-09-19T01:15:26.846Z",
+      "id": 4
     }
   ],
   "empresas": [
