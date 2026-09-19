@@ -37,6 +37,8 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
+  background-color: var(--bg-900);
 }
 
 body {
@@ -44,19 +46,46 @@ body {
   min-height: 100vh;
   font-family: Inter, 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   color: var(--text-main);
-  background:
-    radial-gradient(circle at 12% 0%, rgba(90, 169, 255, 0.2), transparent 20%),
-    radial-gradient(circle at 82% 8%, rgba(99, 146, 255, 0.12), transparent 26%),
-    radial-gradient(circle at 50% 100%, rgba(11, 21, 38, 0.9), transparent 42%),
-    linear-gradient(180deg, var(--bg-900) 0%, var(--bg-800) 32%, var(--bg-700) 100%);
+  background-color: transparent;
+  overflow-x: hidden;
+  position: relative;
 }
 
 body::before {
   content: "";
   position: fixed;
+  inset: -48px;
+  z-index: -2;
+  pointer-events: none;
+  background-image: url('../img/image.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  will-change: transform;
+  animation: bg-pan-diagonal 26s ease-in-out infinite alternate;
+}
+
+body::after {
+  content: "";
+  position: fixed;
   inset: 0;
   pointer-events: none;
-  background: linear-gradient(120deg, rgba(255, 255, 255, 0.025), transparent 35%, rgba(255, 255, 255, 0.02));
+  z-index: -1;
+  background:
+    radial-gradient(circle at 12% 0%, rgba(90, 169, 255, 0.2), transparent 24%),
+    radial-gradient(circle at 82% 8%, rgba(99, 146, 255, 0.14), transparent 30%),
+    radial-gradient(circle at 50% 100%, rgba(11, 21, 38, 0.85), transparent 45%),
+    linear-gradient(180deg, rgba(7, 17, 31, 0.78) 0%, rgba(11, 21, 38, 0.82) 32%, rgba(16, 28, 45, 0.88) 100%),
+    linear-gradient(120deg, rgba(255, 255, 255, 0.025), transparent 35%, rgba(255, 255, 255, 0.02));
+}
+
+@keyframes bg-pan-diagonal {
+  0% {
+    transform: translate3d(-30px, 30px, 0) scale(1.04);
+  }
+  100% {
+    transform: translate3d(30px, -30px, 0) scale(1.07);
+  }
 }
 
 button,
@@ -202,6 +231,8 @@ dialog:focus-visible {
 }
 
 main {
+  position: relative;
+  z-index: 1;
   width: min(1180px, 92vw);
   margin: 28px auto 64px;
 }
