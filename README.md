@@ -31,5 +31,15 @@ Esto inicia:
 - Comparación de compromisos y alertas.
 - Historial básico y métricas.
 
+## Interfaz y Fondo Animado
+- **Imagen utilizada**: Imagen tecnológica con vectores diagonales ascendentes (`image.png`).
+- **Ubicación de la imagen**: `img/image.png`.
+- **Comportamiento de la animación**:
+  - Desplazamiento continuo, lento y elegante en bucle infinito (duración de 26 segundos).
+  - Dirección visual: de abajo/izquierda hacia arriba/derecha, siguiendo la orientación natural de la imagen.
+  - Proporciones preservadas mediante `background-size: cover` con capa de contraste y gradientes para máxima legibilidad.
+  - Totalmente responsivo para escritorio, laptop, tablet y móvil sin generar scroll horizontal.
+  - Compatible con accesibilidad mediante `prefers-reduced-motion`.
+
 ## Nota académica
 Los criterios de admisión en `db.json` son datos de demostración del laboratorio y no representan normativa oficial de Costa Rica.
